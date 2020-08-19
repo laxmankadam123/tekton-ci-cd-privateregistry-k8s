@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  name: pipeline-run1
+spec:
+  pipelineRef:
+    name: build-and-deploy-pipeline1
+  resources:
+    - name: git-source
+      resourceRef:
+        name: git-input1
+  params:
+    - name: pathToYamlFile
+      value: "pipeline/deploy.yaml"
+    - name: imageUrl
+      value: master:5000/datamato1234
+    - name: imageTag
+      value: "1.0"
+  serviceAccountName: kadam121
