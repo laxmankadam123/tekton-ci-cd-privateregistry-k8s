@@ -4,29 +4,27 @@ Following is the steps to deploy simple hello  application using ci/cd with tekt
 
 1. first we need to create the private docker registry locally for that go to the location of docker-compose directory and use
 
---> $ mkdir auth
---> $ yum install httpd -y
---> $ htpasswd -Bbn <name-of-user> <password> > auth/htpasswd
---> $ docker-compose up -d
+     -->   $ mkdir auth
+     -->   $ yum install httpd -y
+     -->   $ htpasswd -Bbn <name-of-user> <password> > auth/htpasswd
+     -->   $ docker-compose up -d
 
 2. then login to they private docker registry  using created user 
 
---> $ docker login localhost:5000
+     --> $ docker login localhost:5000
 
 3. After that go to they worker node and create following file 
 
---> $ cat /etc/docker/daemon.json 
-{
-
-  "insecure-registries": ["name-of-hostname-of-privateregistry:5000"]
-
-}
+     --> $ cat /etc/docker/daemon.json 
+          {
+               "insecure-registries": ["name-of-hostname-of-privateregistry:5000"]
+          }
 
 4. restart the docker on worker node
 
 5. create secret for pull and push image to they private registry
-
---> $ kubectl create secret docker-registry <name-of-secret> --docker-server=localhost:5000 --docker-username=<name-of-user> --docker-password=<password> 
+ 
+      --> $ kubectl create secret docker-registry <name-of-secret> --docker-server=localhost:5000 --docker-username=<name-of-user> --docker-password=<password> 
 
 6. create service,role and rolebinding for that use service.yaml file
 
