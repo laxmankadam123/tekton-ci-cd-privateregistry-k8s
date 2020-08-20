@@ -24,7 +24,7 @@ Following is the steps to deploy simple hello  application using ci/cd with tekt
 
 5.  create secret for pull and push image to they private registry
  
-      --> $ kubectl create secret docker-registry <name-of-secret> --docker-server=localhost:5000 --docker-username=<name-of-user> --docker-password=<password> 
+      --> $ kubectl create secret docker-registry name-of-secret --docker-server=localhost:5000 --docker-username= name-of-user  --docker-password=password 
 
 6.  create service,role and rolebinding for that use service.yaml file
 
@@ -43,3 +43,4 @@ Following is the steps to deploy simple hello  application using ci/cd with tekt
 
 
    
+ 
