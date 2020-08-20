@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: /tekton-ci-cd-privateregistry-k8s/src
+        image: master:5000/datamato12345:1.0
 
         ports:
           - containerPort: 3300
