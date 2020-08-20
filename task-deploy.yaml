@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: Task
 metadata:
-  name: deploy-using-kubectl1
+  name: < name-of-task2 >
 spec:
   inputs:
     resources:
