@@ -31,6 +31,9 @@ spec:
     spec:
       containers:
       - name: app
-        image: kadam121212/tektonprivate:0.1
+        image: /tekton-ci-cd-privateregistry-k8s/src
+
         ports:
           - containerPort: 3300
+      imagePullSecrets:
+      - name: kadam2
