@@ -31,9 +31,9 @@ spec:
     spec:
       containers:
       - name: app
-        image: master:5000/datamato12345:1.0
+        image: <imagename>
 
         ports:
           - containerPort: 3300
       imagePullSecrets:
-      - name: kadam2
+      - name: <secretname>
