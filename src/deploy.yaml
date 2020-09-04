@@ -31,9 +31,9 @@ spec:
     spec:
       containers:
       - name: app
-        image: <imagename>
+        image: localhost:30221/registryimagecreated:2.0
 
         ports:
           - containerPort: 3300
-      imagePullSecrets:
-      - name: <secretname>
+    #  imagePullSecrets:
+    #  - name: <secretname>
