@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: localhost:30221/registryimagecreated:2.0
+        image: worker:30221/sampleimage:2.0
 
         ports:
           - containerPort: 3300
