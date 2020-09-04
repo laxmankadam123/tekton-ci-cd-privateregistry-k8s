@@ -1,4 +1,4 @@
-# tekton-ci-cd-privateregistry-k8s
+# tekton-ci/cd-privateregistry-using-container.
 
 Following is the steps to deploy simple hello  application using ci/cd with tekton on k8s with private registry
 
